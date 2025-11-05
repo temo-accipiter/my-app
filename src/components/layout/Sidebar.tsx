@@ -33,7 +33,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "fixed left-0 top-16 z-30 hidden h-[calc(100vh-4rem)] border-r bg-background transition-all duration-300 md:block",
+        "bg-background fixed top-16 left-0 z-30 hidden h-[calc(100vh-4rem)] border-r transition-all duration-300 md:block",
         isCollapsed ? "w-16" : "w-64"
       )}
     >
@@ -48,10 +48,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
             aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
           >
             <ChevronLeft
-              className={cn(
-                "h-4 w-4 transition-transform",
-                isCollapsed && "rotate-180"
-              )}
+              className={cn("h-4 w-4 transition-transform", isCollapsed && "rotate-180")}
             />
           </Button>
         </div>
@@ -65,7 +62,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                "hover:bg-accent hover:text-accent-foreground flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 isCollapsed && "justify-center"
               )}
             >
@@ -78,9 +75,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
         {/* Footer info */}
         {!isCollapsed && (
           <div className="border-t p-4">
-            <p className="text-xs text-muted-foreground">
-              Version 1.0.0
-            </p>
+            <p className="text-muted-foreground text-xs">Version 1.0.0</p>
           </div>
         )}
       </div>

@@ -11,19 +11,18 @@ import { cn } from "@/lib/utils";
  * <Label htmlFor="email">Email</Label>
  * <Input id="email" type="email" />
  */
-const Label = React.forwardRef<
-  HTMLLabelElement,
-  React.ComponentProps<"label">
->(({ className, ...props }, ref) => (
-  <label
-    ref={ref}
-    className={cn(
-      "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
-      className
-    )}
-    {...props}
-  />
-));
+const Label = React.forwardRef<HTMLLabelElement, React.ComponentProps<"label">>(
+  ({ className, ...props }, ref) => (
+    <label
+      ref={ref}
+      className={cn(
+        "text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+        className
+      )}
+      {...props}
+    />
+  )
+);
 Label.displayName = "Label";
 
 export { Label };
