@@ -1,16 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  Sparkles,
-  Zap,
-  Shield,
-  Rocket,
-  Heart,
-  Star,
-  Code,
-  Palette,
-} from "lucide-react";
+import { Sparkles, Zap, Shield, Rocket, Heart, Star, Code, Palette } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import {
@@ -116,13 +107,11 @@ export default function Home() {
             Next.js 16 + shadcn/ui
           </Badge>
 
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-            Modern UI Architecture
-          </h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Modern UI Architecture</h1>
 
-          <p className="text-lg text-muted-foreground sm:text-xl">
-            A professional, type-safe, and responsive UI built with Next.js 16,
-            TypeScript, Tailwind CSS, and shadcn/ui components.
+          <p className="text-muted-foreground text-lg sm:text-xl">
+            A professional, type-safe, and responsive UI built with Next.js 16, TypeScript, Tailwind
+            CSS, and shadcn/ui components.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -144,9 +133,7 @@ export default function Home() {
       <section className="mb-16">
         <div className="mb-8 text-center">
           <h2 className="mb-2 text-3xl font-bold">Features</h2>
-          <p className="text-muted-foreground">
-            Everything you need to build modern applications
-          </p>
+          <p className="text-muted-foreground">Everything you need to build modern applications</p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -154,7 +141,7 @@ export default function Home() {
             <Card key={feature.title} className="relative overflow-hidden">
               <CardHeader>
                 <div className="mb-2 flex items-start justify-between">
-                  <feature.icon className="h-8 w-8 text-primary" />
+                  <feature.icon className="text-primary h-8 w-8" />
                   <Badge variant="secondary">{feature.badge}</Badge>
                 </div>
                 <CardTitle>{feature.title}</CardTitle>
@@ -171,9 +158,7 @@ export default function Home() {
       <section className="mb-16">
         <div className="mb-8 text-center">
           <h2 className="mb-2 text-3xl font-bold">Components Showcase</h2>
-          <p className="text-muted-foreground">
-            Interactive examples of shadcn/ui components
-          </p>
+          <p className="text-muted-foreground">Interactive examples of shadcn/ui components</p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2">
@@ -181,9 +166,7 @@ export default function Home() {
           <Card>
             <CardHeader>
               <CardTitle>Buttons</CardTitle>
-              <CardDescription>
-                Different button variants and sizes
-              </CardDescription>
+              <CardDescription>Different button variants and sizes</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex flex-wrap gap-2">
@@ -229,18 +212,12 @@ export default function Home() {
           <Card>
             <CardHeader>
               <CardTitle>Form Elements</CardTitle>
-              <CardDescription>
-                Inputs and labels for forms
-              </CardDescription>
+              <CardDescription>Inputs and labels for forms</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="john@example.com"
-                />
+                <Input id="email" type="email" placeholder="john@example.com" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
@@ -271,14 +248,13 @@ export default function Home() {
                     <DialogHeader>
                       <DialogTitle>Dialog Example</DialogTitle>
                       <DialogDescription>
-                        This is a demo of the dialog component. It's accessible
-                        and fully customizable.
+                        This is a demo of the dialog component. It&apos;s accessible and fully
+                        customizable.
                       </DialogDescription>
                     </DialogHeader>
                     <div className="py-4">
-                      <p className="text-sm text-muted-foreground">
-                        Dialogs are great for confirmations, forms, and modal
-                        content.
+                      <p className="text-muted-foreground text-sm">
+                        Dialogs are great for confirmations, forms, and modal content.
                       </p>
                     </div>
                     <DialogFooter>
@@ -302,9 +278,7 @@ export default function Home() {
                     <DropdownMenuItem>Settings</DropdownMenuItem>
                     <DropdownMenuItem>Team</DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem className="text-destructive">
-                      Logout
-                    </DropdownMenuItem>
+                    <DropdownMenuItem className="text-destructive">Logout</DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
 
@@ -335,9 +309,7 @@ export default function Home() {
           <Card className="lg:col-span-2">
             <CardHeader>
               <CardTitle>Avatars</CardTitle>
-              <CardDescription>
-                User avatars with fallback support
-              </CardDescription>
+              <CardDescription>User avatars with fallback support</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-4">
@@ -363,9 +335,9 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="rounded-lg border bg-card p-8 text-center shadow">
+      <section className="bg-card rounded-lg border p-8 text-center shadow">
         <h2 className="mb-2 text-2xl font-bold">Ready to Get Started?</h2>
-        <p className="mb-6 text-muted-foreground">
+        <p className="text-muted-foreground mb-6">
           Start building your next project with this modern UI architecture
         </p>
         <div className="flex flex-wrap justify-center gap-4">

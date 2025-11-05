@@ -2,13 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { X, Home, Star, User, Settings } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Home, Star, User, Settings } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
@@ -48,7 +43,7 @@ export function MobileMenu({ open, onOpenChange }: MobileMenuProps) {
               key={item.href}
               href={item.href}
               onClick={() => onOpenChange(false)}
-              className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+              className="hover:bg-accent hover:text-accent-foreground flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors"
             >
               <item.icon className="h-5 w-5" />
               <span>{item.label}</span>

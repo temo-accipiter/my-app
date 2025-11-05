@@ -29,7 +29,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t bg-background">
+    <footer className="bg-background border-t">
       <div className="container px-4 py-12">
         {/* Footer grid */}
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
@@ -38,7 +38,7 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-2">
               <span className="text-xl font-bold">MyApp</span>
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="text-muted-foreground mt-4 text-sm">
               Building modern web applications with Next.js and TypeScript.
             </p>
           </div>
@@ -52,7 +52,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -67,25 +67,25 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             © {currentYear} MyApp. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link
               href="#"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
             >
               Twitter
             </Link>
             <Link
               href="#"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
             >
               GitHub
             </Link>
             <Link
               href="#"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
             >
               LinkedIn
             </Link>

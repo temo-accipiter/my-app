@@ -28,7 +28,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b backdrop-blur">
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo / Brand */}
         <div className="flex items-center gap-6">
@@ -53,7 +53,7 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors"
               >
                 {item.label}
               </Link>
