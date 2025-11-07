@@ -21,6 +21,17 @@ const envSchema = z.object({
     .default("http://localhost:3000")
     .describe("Public URL of the application"),
 
+  // Supabase public variables (required for authentication)
+  NEXT_PUBLIC_SUPABASE_URL: z
+    .string()
+    .url()
+    .describe("Supabase project URL"),
+
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: z
+    .string()
+    .min(1)
+    .describe("Supabase anonymous/public API key"),
+
   // Optional public variables
   NEXT_PUBLIC_API_URL: z.string().url().optional().describe("Public API URL"),
 

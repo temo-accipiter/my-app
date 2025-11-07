@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { UserMenu } from "@/components/auth/UserMenu";
+import { useAuth } from "@/hooks/useAuth";
 
 /**
  * Header - En-tête responsive de l'application
@@ -20,6 +22,8 @@ interface HeaderProps {
 }
 
 export function Header({ onMobileMenuOpen }: HeaderProps) {
+  const { user, isLoading } = useAuth();
+
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Features", href: "#features" },
@@ -64,9 +68,26 @@ export function Header({ onMobileMenuOpen }: HeaderProps) {
         {/* Actions à droite */}
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button size="sm" className="hidden sm:flex">
-            Get Started
-          </Button>
+
+          {/* Affichage conditionnel selon l'état d'authentification */}
+          {!isLoading && (
+            <>
+              {user ? (
+                // Si l'utilisateur est connecté, afficher le UserMenu
+                <UserMenu />
+              ) : (
+                // Si l'utilisateur n'est pas connecté, afficher les boutons login/signup
+                <>
+                  <Button variant="ghost" size="sm" asChild className="hidden sm:flex">
+                    <Link href="/login">Connexion</Link>
+                  </Button>
+                  <Button size="sm" asChild className="hidden sm:flex">
+                    <Link href="/signup">Inscription</Link>
+                  </Button>
+                </>
+              )}
+            </>
+          )}
         </div>
       </div>
     </header>

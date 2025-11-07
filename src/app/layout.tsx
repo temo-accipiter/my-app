@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { LayoutWrapper } from "@/components/layout-wrapper";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 /**
  * Configuration des fonts Geist (Sans et Mono)
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
  * Intègre :
  * - Les fonts Geist (Sans et Mono)
  * - ThemeProvider pour le dark mode
+ * - AuthProvider pour l'authentification Supabase
  * - LayoutWrapper avec Header, Sidebar, Footer
  * - Toaster pour les notifications
  */
@@ -49,8 +51,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LayoutWrapper>{children}</LayoutWrapper>
-          <Toaster />
+          <AuthProvider>
+            <LayoutWrapper>{children}</LayoutWrapper>
+            <Toaster />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
